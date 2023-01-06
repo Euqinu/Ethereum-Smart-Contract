@@ -27,4 +27,12 @@ contract AddPeople{
     function addPerson(uint num,string memory firstname,string memory lastname) public isBoss isEven{
         people[num]=Person(firstname,lastname);
     }
+    
+    function storeNumber(uint num) public{
+        favNumber=num;
+    }
+
+    function retrieveNumber() public view returns(uint)  {
+        return favNumber;
+    }
 }
